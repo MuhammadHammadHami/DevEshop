@@ -38,6 +38,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "ExtentReports": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
             "MSTest.TestAdapter": {
               "target": "Package",
               "version": "[2.1.2, )"
@@ -48,7 +52,7 @@
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.8.0, )"
+              "version": "[16.8.3, )"
             },
             "Selenium.Chrome.WebDriver": {
               "target": "Package",
@@ -65,6 +69,10 @@
             "Selenium.WebDriver": {
               "target": "Package",
               "version": "[3.141.0, )"
+            },
+            "ServiceStack.Common": {
+              "target": "Package",
+              "version": "[5.10.2, )"
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

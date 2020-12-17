@@ -13,6 +13,7 @@ namespace veritiv_POM
         BasePage basepage = new BasePage();
         LoginPage loginpage = new LoginPage();
         MakeAnEnquiry makeanenquiry = new MakeAnEnquiry();
+        MakeAnOffer makeanoffer = new MakeAnOffer();
         AddToCart addtocart = new AddToCart();
 
         #region Execution Hierarchy
@@ -43,13 +44,11 @@ namespace veritiv_POM
 
         }
 
-
         [AssemblyInitialize()]
         public static void AssemblyInit(TestContext context)
         {
 
         }
-
 
         [AssemblyCleanup]
         public static void AssemblyCleanup()
@@ -59,39 +58,46 @@ namespace veritiv_POM
 
         #endregion
 
-
         [TestMethod]
         public void TestCase_Login()
         {
 
-            loginpage.login("https://dev.eshoppers.pk/", "muhammad.hammad@cooperativecomputing.com", "12345678");
+            loginpage.login("https://dev.eshoppers.pk/", "03323498842", "12345678");
 
         }
 
         [TestMethod]
         public void TestCase_Enquiry()
         {
-            TestCase_Login();
 
-            makeanenquiry.enquiry("03323498842", "This is Enquiry field from Selenium");
+            TestCase_Login();
+            makeanenquiry.enquiry("https://dev.eshoppers.pk/", "213323232341", "First Name","Last Name","muhammad.hammad@cooperativecomputing.com", "This is Enquiry field from Selenium");
         }
 
-/*        [TestMethod]
-        public void TestCase_PlaceOrder()
+
+        [TestMethod]
+        public void TestCase_Offer()
         {
-            TestCase_Login();
+           makeanoffer.offer("https://dev.eshoppers.pk/", "213323232041", "First Name", "Last Name", "muhammad.hammad@cooperativecomputing.com", "19");
+        }
 
-            addtocart.addToCart("03323498842", "address", "City");
 
-        }*/
+        /*        [TestMethod]
+                public void TestCase_PlaceOrder()
+                {
+                    TestCase_Login();
 
-       /* [TestMethod]
-        public void TestCase_Checkout()
-        {
+                    addtocart.addToCart("03323498842", "address", "City");
 
-            loginpage.login("https://dev.eshoppers.pk/", "muhammad.hammad@cooperativecomputing.com", "12345678");
+                }*/
 
-        }*/
+        /* [TestMethod]
+         public void TestCase_Checkout()
+         {
+
+             loginpage.login("https://dev.eshoppers.pk/", "muhammad.hammad@cooperativecomputing.com", "12345678");
+
+         }*/
 
 
     }
