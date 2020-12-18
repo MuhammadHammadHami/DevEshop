@@ -15,6 +15,7 @@ namespace veritiv_POM
         MakeAnEnquiry makeanenquiry = new MakeAnEnquiry();
         MakeAnOffer makeanoffer = new MakeAnOffer();
         AddToCart addtocart = new AddToCart();
+        Registration register = new Registration();
 
         #region Execution Hierarchy
 
@@ -82,14 +83,12 @@ namespace veritiv_POM
         }
 
 
-        /*        [TestMethod]
-                public void TestCase_PlaceOrder()
-                {
-                    TestCase_Login();
+        [TestMethod]
+        public void TestCase_Registration()
+        {
+            register.registration("https://dev.eshoppers.pk/", "First Name", "Last Name", "muhammad.hammad@cooperativecomputing.com", "10910101010", "address", "City", "Country", "Password", "Confirm Password");
 
-                    addtocart.addToCart("03323498842", "address", "City");
-
-                }*/
+        }
 
         /* [TestMethod]
          public void TestCase_Checkout()

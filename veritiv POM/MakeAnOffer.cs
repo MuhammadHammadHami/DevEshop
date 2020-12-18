@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using ServiceStack;
 using System;
@@ -12,6 +13,7 @@ namespace veritiv_POM
     {
         public void offer(string url, string number, string firstname, string lastname, string email, string OfferAmount)
         {
+
             By NavigateToProductName = By.XPath("//body/div[@id='wrapper']/div[@id='content']/div[1]/div[4]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[7]/div[1]/div[1]/div[1]");
             By OfferBTN = By.XPath("//input[@id='button-offer']");
 
@@ -24,6 +26,7 @@ namespace veritiv_POM
 
             By OfferTXT = By.XPath("//input[@id='offer']");
             By RequestBTN = By.XPath("//button[@id='request']");
+            By successMessage = By.XPath("//span[contains(text(),'Offer Sent Successully')]");
             By CloseBTN = By.XPath("//button[contains(text(),'Close')]");
             By Home = By.XPath("//header/div[3]/div[1]/div[1]/div[2]/div[1]/nav[1]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[1]/a[1]/span[1]/strong[1]");
 
@@ -41,13 +44,12 @@ namespace veritiv_POM
 //            Thread.Sleep(5000);
 
             driver.FindElement(NavigateToProductName).Click();
-            Thread.Sleep(5000);
-
+            
             
             driver.FindElement(OfferBTN).Click();
-            Thread.Sleep(5000);
+            
 
-            // driver.FindElement(OfferModal);
+            
             driver.FindElement(By.ClassName("modal-title")).Click();
 //            Thread.Sleep(3000);
             driver.FindElement(MobileNoTXT);
@@ -74,6 +76,11 @@ namespace veritiv_POM
 
             driver.FindElement(RequestBTN).Click();
             Thread.Sleep(9000);
+
+            driver.FindElement(successMessage);
+
+            Assert.AreEqual("Offer Sent Successfully", successMessage, "Failed to Submit");
+
 
             driver.FindElement(CloseBTN).Click();
             Thread.Sleep(3000);

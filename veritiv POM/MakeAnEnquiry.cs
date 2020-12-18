@@ -10,6 +10,8 @@ namespace veritiv_POM
     {
         public void enquiry(string url, string number, string firstname, string lastname, string email, string enquiry )
         {
+            By NewsLetterPOPup = By.CssSelector("popup - title");
+            By NLpopupCancelPTN = By.XPath("//button[contains(text(),'×')]");
             By NavigateToEnquiryTXT = By.XPath("//strong[contains(text(),'Make An Enquiry')]");
             By MobileNoTXT = By.XPath("//input[@id='input-telephone']");
             By FirstNameTXT = By.XPath("//input[@id='input-firstname']");
@@ -22,13 +24,13 @@ namespace veritiv_POM
             By Home = By.XPath("//header/div[3]/div[1]/div[1]/div[2]/div[1]/nav[1]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[1]/a[1]/span[1]/strong[1]");
 
 
-/*            driver.Url = url;
+            /*            driver.Url = url;
 
-            Thread.Sleep(5000);
+                        Thread.Sleep(5000);
 
-            driver.FindElement(By.ClassName("popup-title")).Click();
-            driver.FindElement(By.XPath("//button[contains(text(),'×')]")).Click();
-            Thread.Sleep(3000);*/
+                        driver.FindElement(NewsLetterPOPup).Click();
+                        driver.FindElement(NLpopupCancelPTN).Click();
+                        Thread.Sleep(3000);*/
 
             driver.FindElement(NavigateToEnquiryTXT).Click();
             Thread.Sleep(5000);
