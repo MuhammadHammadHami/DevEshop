@@ -22,8 +22,13 @@ namespace veritiv_POM
             By Home = By.XPath("//header/div[3]/div[1]/div[1]/div[2]/div[1]/nav[1]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[1]/a[1]/span[1]/strong[1]");
 
 
-            //driver.Url = url;
+/*            driver.Url = url;
 
+            Thread.Sleep(5000);
+
+            driver.FindElement(By.ClassName("popup-title")).Click();
+            driver.FindElement(By.XPath("//button[contains(text(),'×')]")).Click();
+            Thread.Sleep(3000);*/
 
             driver.FindElement(NavigateToEnquiryTXT).Click();
             Thread.Sleep(5000);

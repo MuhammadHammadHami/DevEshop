@@ -20,14 +20,14 @@ namespace veritiv_POM
 
             driver.Url = url;
 
+            driver.FindElement(By.ClassName("popup-title")).Click();
+            driver.FindElement(By.XPath("//button[contains(text(),'×')]")).Click();
 
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            /*            driver.SwitchTo().ParentFrame();
+             //           driver.SwitchTo().Frame(driver.FindElement(By.XPath("//body/div[@id='wrapper']/div[@id='content']/div[@id='container-module-newletter']/div[@id='so_newletter_custom_popup']/div[1]")));
+                        driver.FindElement(Popup).Click();
+                        driver.SwitchTo().DefaultContent();*/
 
-/*            driver.SwitchTo().ParentFrame();
- //           driver.SwitchTo().Frame(driver.FindElement(By.XPath("//body/div[@id='wrapper']/div[@id='content']/div[@id='container-module-newletter']/div[@id='so_newletter_custom_popup']/div[1]")));
-            driver.FindElement(Popup).Click();
-            driver.SwitchTo().DefaultContent();*/
-            
             driver.FindElement(NavigateToLoginTXT).Click();
             driver.FindElement(MobileNoTXT).SendKeys(MobileNo);
             driver.FindElement(passwordTXT).SendKeys(password);

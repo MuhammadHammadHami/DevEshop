@@ -30,9 +30,11 @@ namespace veritiv_POM
             driver.Url = url;
 
             Thread.Sleep(5000);
-/*            Actions actions = new Actions(driver);
-            actions.MoveToElement(driver.FindElement(NavigateToProductName));
-            actions.Perform();*/
+
+            driver.FindElement(By.ClassName("popup-title")).Click();
+            driver.FindElement(By.XPath("//button[contains(text(),'×')]")).Click();
+            Thread.Sleep(3000);
+
             IJavaScriptExecutor js = driver as IJavaScriptExecutor;
 
             js.ExecuteScript("window.scrollBy(0,1400);");
@@ -75,7 +77,7 @@ namespace veritiv_POM
 
             driver.FindElement(CloseBTN).Click();
             Thread.Sleep(3000);
-            driver.FindElement(Home);
+            driver.FindElement(Home).Click();
             Thread.Sleep(10000);
 
 
