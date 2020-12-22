@@ -167,3 +167,4 @@ C:\Users\Muhammad Hammad\source\repos\veritiv POM\veritiv POM\bin\Debug\netcorea
 C:\Users\Muhammad Hammad\source\repos\veritiv POM\veritiv POM\bin\Debug\netcoreapp3.1\runtimes\win-x64\nativeassets\netcoreapp2.2\aspnetcorev2_inprocess.dll
 C:\Users\Muhammad Hammad\source\repos\veritiv POM\veritiv POM\bin\Debug\netcoreapp3.1\runtimes\win-x86\nativeassets\netcoreapp2.2\aspnetcorev2_inprocess.dll
 C:\Users\Muhammad Hammad\source\repos\veritiv POM\veritiv POM\obj\Debug\netcoreapp3.1\veritiv POM.csproj.CoreCompileInputs.cache
+C:\Users\Muhammad Hammad\source\repos\veritiv POM\veritiv POM\bin\Debug\netcoreapp3.1\chromedriver.exe

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using static veritiv_POM.ExecutionClass;
 
 namespace veritiv_POM
@@ -34,9 +35,12 @@ namespace veritiv_POM
             driver.FindElement(loginBTN).Click();
 
             driver.FindElement(NavigateToHomeTXT).Click();
+            Thread.Sleep(3000);
 
+            driver.FindElement(By.ClassName("popup-title")).Click();
+            driver.FindElement(By.XPath("//button[contains(text(),'×')]")).Click();
 
-
+            
 
         }
     }

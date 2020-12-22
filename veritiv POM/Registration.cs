@@ -55,13 +55,14 @@ namespace veritiv_POM
             
             js.ExecuteScript("window.scrollBy(0,200);");
 
-            //            driver.FindElement(CountryTXT).SendKeys(country);
+            //driver.FindElement(CountryTXT).SendKeys(country);
 
             driver.FindElement(PasswordTXT).Clear();
             driver.FindElement(PasswordTXT).SendKeys(password);
 
             js.ExecuteScript("window.scrollBy(0,200);");
 
+            driver.FindElement(ConfirmPasswordTXT).Clear();
             driver.FindElement(ConfirmPasswordTXT).SendKeys(confirm_password);
             driver.FindElement(PrivacyPolicyCB).Click();
 

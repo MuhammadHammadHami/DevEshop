@@ -14,6 +14,7 @@ namespace veritiv_POM
 
         public void SeleniumInit()
         {
+//            var myDriver = new ChromeDriver();
             var myDriver = new FirefoxDriver();
             driver = myDriver;
         }

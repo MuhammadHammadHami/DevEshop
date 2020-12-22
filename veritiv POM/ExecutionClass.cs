@@ -86,7 +86,7 @@ namespace veritiv_POM
         [TestMethod]
         public void TestCase_Registration()
         {
-            register.registration("https://dev.eshoppers.pk/", "First Name", "Last Name", "muhammad.hammad@cooperativecomputing.com", "10910101010", "address", "City", "Country", "Password", "Confirm Password");
+            register.registration("https://dev.eshoppers.pk/", "First Name", "Last Name", "muhammad.hammad@cooperativecomputing.com", "10910111010", "address", "City", "Country", "Password", "Confirm Password");
 
         }
 
