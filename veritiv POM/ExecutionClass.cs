@@ -16,6 +16,7 @@ namespace veritiv_POM
         MakeAnOffer makeanoffer = new MakeAnOffer();
         AddToCart addtocart = new AddToCart();
         Registration register = new Registration();
+        Checkout checkout = new Checkout();
 
         #region Execution Hierarchy
 
@@ -86,18 +87,24 @@ namespace veritiv_POM
         [TestMethod]
         public void TestCase_Registration()
         {
-            register.registration("https://dev.eshoppers.pk/", "First Name", "Last Name", "muhammad.hammad@cooperativecomputing.com", "10910111010", "address", "City", "Country", "Password", "Confirm Password");
+            register.registration("https://dev.eshoppers.pk/", "Selenium", "User", "muhammad.hammad@cooperativecomputing.com", "12343214213", "Selenium Address", "Selenium City", "Selenium Country", "12345678", "12345678");
+
 
         }
 
-        /* [TestMethod]
+        [TestMethod]
+        public void TestCase_AddToCart()
+        {
+            addtocart.addToCart("https://dev.eshoppers.pk/");
+
+        }
+
+         [TestMethod]
          public void TestCase_Checkout()
          {
+            TestCase_AddToCart();
+             checkout.CheckOut("12123202342", "Selenium","User", "muhammad.hammad@cooperativecomputing.com", "Selenium Address", "Selenium City");
 
-             loginpage.login("https://dev.eshoppers.pk/", "muhammad.hammad@cooperativecomputing.com", "12345678");
-
-         }*/
-
-
+         }
     }
 }

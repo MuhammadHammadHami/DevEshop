@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
+using System.Drawing;
+using System.Drawing.Printing;
 
 namespace veritiv_POM
 {
@@ -31,13 +33,13 @@ namespace veritiv_POM
 
             driver.Url = url;
 
-            Thread.Sleep(3000);
+            
             driver.FindElement(By.ClassName("popup-title")).Click();
             driver.FindElement(By.XPath("//button[contains(text(),'×')]")).Click();
-            Thread.Sleep(3000);
+            
 
             driver.FindElement(RegistrationLINK).Click();
-            Thread.Sleep(5000);
+            
             driver.FindElement(FirstNameTXT).SendKeys(firstname);
             driver.FindElement(LastNameTXT).SendKeys(lastname);
 
@@ -60,13 +62,13 @@ namespace veritiv_POM
             driver.FindElement(PasswordTXT).Clear();
             driver.FindElement(PasswordTXT).SendKeys(password);
 
-            js.ExecuteScript("window.scrollBy(0,200);");
+            js.ExecuteScript("window.scrollBy(0,400);");
 
             driver.FindElement(ConfirmPasswordTXT).Clear();
             driver.FindElement(ConfirmPasswordTXT).SendKeys(confirm_password);
             driver.FindElement(PrivacyPolicyCB).Click();
 
-            Thread.Sleep(15000);
+            Thread.Sleep(20000);
 
             driver.FindElement(ContinueBTN).Click();
             Thread.Sleep(5000);

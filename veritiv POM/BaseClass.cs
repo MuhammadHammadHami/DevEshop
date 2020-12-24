@@ -17,6 +17,7 @@ namespace veritiv_POM
 //            var myDriver = new ChromeDriver();
             var myDriver = new FirefoxDriver();
             driver = myDriver;
+/*            ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile("Registration.png", ScreenshotImageFormat.Png); */ 
         }
     }
 }
